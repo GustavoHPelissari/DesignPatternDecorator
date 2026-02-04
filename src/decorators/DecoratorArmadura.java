@@ -2,6 +2,9 @@ package decorators;
 
 import personagens.Personagem;
 
+/*
+        ConcreteDecorator -> Decorador concreto que adiciona comportamento de armmadura
+ */
 public class DecoratorArmadura extends DecoratorPersonagem
 {
     private final String tipoArmadura;

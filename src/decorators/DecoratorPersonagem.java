@@ -2,6 +2,10 @@ package decorators;
 
 import personagens.Personagem;
 
+/*
+        Decorator -> Classe abstrata que implementa a interface Component
+        (OBS) -> Mamtém referência para um objeto Component
+ */
 public abstract class DecoratorPersonagem implements Personagem
 {
     protected Personagem personagemDecorator;
@@ -11,6 +15,8 @@ public abstract class DecoratorPersonagem implements Personagem
         this.personagemDecorator = personagemDecorator;
     }
 
+    // Delega todas as operações para o Component enolvido por padrão
+    // As subclasses podem sobrescrever os métodos que querem modificar
     @Override
     public String getDescrisao()
     {

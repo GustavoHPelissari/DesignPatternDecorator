@@ -1,6 +1,8 @@
 package personagens;
 
-//ConcreteComponent
+/*
+        ConcreteComponent -> Implementação concreta do Component
+ */
 public class PersonagemBase implements Personagem
 {
     private String nome;
@@ -16,6 +18,10 @@ public class PersonagemBase implements Personagem
         this.nome = nome;
         this.classe = classe;
     }
+
+    /*
+            IMPLEMENTAÇÕES CONCRETAS DOS MÉTODOS DA INTERFACE
+     */
 
     @Override
     public String getDescrisao() {

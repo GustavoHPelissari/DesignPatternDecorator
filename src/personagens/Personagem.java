@@ -1,6 +1,8 @@
 package personagens;
 
-//Component
+/*
+      Component -> Interface base que define as operações comuns
+ */
 public interface Personagem
 {
     String getDescrisao();
@@ -9,6 +11,8 @@ public interface Personagem
     double getVelocidade();
     double getVida();
 
+
+    // Method default com implementação concreta
     default void mostrarStatus()
     {
         //╔╗ ╠╣ ╬ ╦ ═ ║ ▶ ╚╝ ╩

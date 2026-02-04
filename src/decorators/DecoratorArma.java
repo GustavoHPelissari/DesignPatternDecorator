@@ -2,6 +2,9 @@ package decorators;
 
 import personagens.Personagem;
 
+/*
+        ConcreteDecorator -> Decorador concreto que adiciona comportamento de arma
+ */
 public class DecoratorArma extends DecoratorPersonagem
 {
     private String tipoArma;
@@ -12,6 +15,7 @@ public class DecoratorArma extends DecoratorPersonagem
         super(personagem);
         this.tipoArma = tipoArma;
 
+        // Configura buffs/debuffs específicos
         switch(tipoArma.toLowerCase()) {
             case "espada":
                 this.buffAtaque = 10.0;
@@ -37,14 +41,22 @@ public class DecoratorArma extends DecoratorPersonagem
         }
     }
 
+    /*
+            (OBS) -> Como DecoratorArma herda as implementações padrão da classe DecoratorPersonagem, só precisa sobrescrever o que deseja modificar
+     */
+
+    // Sobrescreve os métodos que quer modificar
     @Override
     public String getDescrisao()
     {
+        // Chama o method do decorator envolvido e adiciona sua descrição
         return super.getDescrisao() + String.format(" + %s (Ataque +%.1f)", tipoArma, buffAtaque);
     }
 
     @Override
-    public double getPoderAtaque() {
+    public double getPoderAtaque()
+    {
+        // Adiciona buff ao ataque
         return super.getPoderAtaque() + buffAtaque;
     }
 }

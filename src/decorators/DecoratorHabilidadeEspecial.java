@@ -2,6 +2,9 @@ package decorators;
 
 import personagens.Personagem;
 
+/*
+        ConcreteDecorator -> Decorador concreto que adiciona comportamento de habilidade especial
+ */
 public class DecoratorHabilidadeEspecial extends DecoratorPersonagem
 {
     private final HabilidadeEspecial habilidadeEspecial;
