@@ -24,7 +24,7 @@ public interface Personagem
         System.out.println("║   • DEFESA         ║ ▶  " + getPoderDefesa());
         System.out.println("║   • VELOCIDADE     ║ ▶  " + getVelocidade());
         System.out.println("╠"+"═════════════════╠"+"═".repeat(50)+"╣");
-        System.out.println("║   • PODER TOTAL    ║ ▶  " + (getPoderAtaque() + getPoderDefesa() + getVida()));
+        System.out.println("║   • PODER TOTAL    ║ ▶  " + (getPoderAtaque() + getPoderDefesa() + getVida() + getVelocidade()));
         System.out.println("╚"+"═════════════════╩"+"═".repeat(50)+"╝");
     }
 }
